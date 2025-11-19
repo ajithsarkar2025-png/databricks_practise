@@ -1,0 +1,14 @@
+resources:
+  pipelines:
+    my_first_etl_pipeline:
+      name: My_First_ETL_Pipeline
+      libraries:
+        - glob:
+            include: ../src/transformations/**
+      catalog: practise
+      channel: CURRENT
+      continuous: false
+      photon: true
+      root_path: ../src
+      schema: practiseschema
+      serverless: true
